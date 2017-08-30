@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'csv'
 
-filename = "rats-api/db/2017complaints.csv"
+filename = "db/2017complaints.csv"
 
 read_file = File.read(filename)
 
