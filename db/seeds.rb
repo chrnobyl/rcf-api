@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'csv'
 
-filename = "#{Rails.root.to_s}/db/2017complaints.csv"
+filename = "rcf-api/db/2017complaints.csv"
 
 read_file = File.read(filename)
 
