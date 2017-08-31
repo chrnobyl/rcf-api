@@ -6,10 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'csv'
+require 'pathname'
+RailsRoot = Pathname.new(RAILS_ROOT).expand_path
 
-filename = File.join(Rails.root, "/db/2017Complaints.csv")
+filename = "/db/2017Complaints.csv"
 
-read_file = File.read(filename)
+read_file = File.read(RailsRoot + filename)
 
 def format_to_datetime(time)
   time.insert(5, "/"+time[0..1])[3..-1].to_datetime
