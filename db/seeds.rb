@@ -7,12 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'csv'
 
-filename = Rails.root.join("db/2017Complaints.csv")
+filename = "rcf-api/db/2017Complaints.csv"
 
 read_file = File.read(filename)
 
 def format_to_datetime(time)
-  time.insert(5, "/"+time[0..1])[3..-1].to_datetime
+  time.insert(5, "/" + time[0..1])[3..-1].to_datetime
 end
 
 File.foreach(filename) do |line|
