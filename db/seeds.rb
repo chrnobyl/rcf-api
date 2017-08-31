@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'csv'
 require 'pathname'
-RailsRoot = Pathname.new(RAILS_ROOT).expand_path
+RailsRoot = Pathname.new(Rails.root).expand_path
 
 filename = "/db/2017Complaints.csv"
 
